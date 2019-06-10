@@ -10,7 +10,11 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+<<<<<<< HEAD
     expect(page.getTitleText()).toEqual('Welcome to ComponentsArchitecting!');
+=======
+    expect(page.getTitleText()).toEqual('Welcome to DataBindingDemo!');
+>>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
   });
 
   afterEach(async () => {

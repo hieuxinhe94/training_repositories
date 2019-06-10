@@ -12,13 +12,21 @@
     "directive-selector": [
       true,
       "attribute",
+<<<<<<< HEAD
       "t3h",
+=======
+      "app",
+>>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
+<<<<<<< HEAD
       "t3h",
+=======
+      "app",
+>>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
       "kebab-case"
     ],
     "import-blacklist": [

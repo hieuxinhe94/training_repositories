@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # ComponentsArchitecting
+=======
+# DataBindingDemo
+>>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
