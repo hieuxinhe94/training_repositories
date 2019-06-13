@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .mountains {
+            position: relative;
+            margin: 320px auto;
+            width: 800px;
+            z-index: 3;
+        }
+
+        .li {
+            float: left;
+        }
+
+        .peak1 {
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 200px solid SteelBlue;
+        }
+
+        .peak2 {
+            border-left: 150px solid transparent;
+            border-right: 175px solid transparent;
+            border-bottom: 150px solid SteelBlue;
+            margin-left: -200px;
+            margin-top: 50px;
+        }
+
+        .peak3 {
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 200px solid SteelBlue;
+            margin-left: -250px;
+        }
+
+        .sun {
+            animation: rise 20s ease-in-out 2s infinite Alternate both;
+            -webkit-animation: rise 10s ease-in-out 1s infinite Alternate both;
+            background: gold;
+            border-radius: 50%;
+            height: 100px;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        .clouds-wrapper {
+            margin: -150px auto;
+            width: 800px;
+        }
+
+        .clouds-wrapper .ul {
+            position: relative;
+        }
+
+        .clouds-wrapper .li {
+            position: absolute;
+            background: Gainsboro;
+        }
+
+        .clouds-wrapper .li:nth-child(1) {
+            border-radius: 30px;
+            height: 50px;
+            width: 150px;
+        }
+
+        .clouds-wrapper .li:nth-child(2) {
+            border-radius: 50%;
+            height: 80px;
+            margin-top: -40px;
+            margin-left: 23px;
+            width: 80px;
+        }
+
+        .clouds-wrapper .li:nth-child(3) {
+            border-radius: 50%;
+            height: 50px;
+            margin-top: -25px;
+            margin-left: 80px;
+            width: 50px;
+        }
+
+        .clouds1 {
+            animation: slideOver 12s infinite Alternate-reverse both;
+            -webkit-animation: slideOver 12s infinite Alternate-reverse both;
+        }
+
+        .clouds2-container {
+            transform: scale(0.75);
+            -webkit-transform: scale(0.75);
+        }
+
+        .clouds2 {
+            animation: slideOver 7s 0.5s infinite Alternate-reverse both;
+            -webkit-animation: slideOver 7s 0.5s infinite Alternate-reverse both;
+        }
+
+        .clouds3-container {
+            transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+        }
+
+        .clouds3 {
+            margin-top: 20px;
+            animation: slideOver 9s 2s infinite Alternate both;
+            -webkit-animation: slideOver 9s 2s infinite Alternate both;
+        }
+
+        .clouds4 {
+            margin-top: 20px;
+            animation: slideOver 13s linear 3s infinite Alternate both;
+            -webkit-animation: slideOver linear 13s 3s infinite Alternate both;
+        }
+
+        @keyframes slideOver {
+            0% {
+                transform: translateX(-300px);
+                -webkit-transform: translateX(-300px);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(800px);
+                -webkit-transform: translateX(800px);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes slideOver {
+            0% {
+                opacity: 0;
+                transform: translateX(-300px);
+                -webkit-transform: translateX(-300px);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(800px);
+                -webkit-transform: translateX(800px);
+            }
+        }
+
+        @keyframes rise {
+            0% {
+                background: tomato;
+                opacity: 0;
+                transform: translateY(0px);
+                -webkit-transform: translateY(0px);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                background: goldenrod;
+            }
+
+            55% {
+                background: golden;
+            }
+
+            100% {
+                transform: translateY(-350px);
+                -webkit-transform: translateY(-350px);
+            }
+        }
+
+        @-webkit-keyframes rise {
+            0% {
+                background: tomato;
+                transform: translateY(0px);
+                -webkit-transform: translateY(0px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                background: goldenrod;
+            }
+
+            55% {
+                background: golden;
+            }
+
+            100% {
+                transform: translateY(-350px);
+                -webkit-transform: translateY(-350px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='ul mountains'>
+        <div class='li peak1'></div>
+        <div class='li peak2'></div>
+        <div class='li peak3'></div>
+    </div>
+
+    <div class='sun'></div>
+
+    <div class='clouds-wrapper'>
+        <div class='ul clouds1'>
+            <div class='li'></div>
+            <div class='li'></div>
+            <div class='li'></div>
+        </div>
+        <div class='clouds2-container'>
+            <div class='ul clouds2'>
+                <div class='li'></div>
+                <div class='li'></div>
+                <div class='li'></div>
+            </div>
+        </div>
+        <div class='clouds3-container'>
+            <div class='ul clouds3'>
+                <div class='li'></div>
+                <div class='li'></div>
+                <div class='li'></div>
+            </div>
+        </div>
+        <div class='clouds4-container'>
+            <div class='ul clouds4'>
+                <div class='li'></div>
+                <div class='li'></div>
+                <div class='li'></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>>

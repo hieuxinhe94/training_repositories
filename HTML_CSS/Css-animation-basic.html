@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        #avatar {
+            margin: 50px;
+            width: 103px;
+            height: 130px;
+            background: url("./avatar.jpg") no-repeat;
+            position: relative;
+            /* Set animation name */
+            animation: nameA linear 0s infinite alternate;
+            animation-delay: 1ms;
+            /* Set duration for the animation */
+            animation-duration: 2s ;
+        }
+
+        @keyframes nameA {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="avatar">Test</div>
+
+</body>
+
+</html>
