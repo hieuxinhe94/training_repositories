@@ -15,7 +15,6 @@ export class ContentComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     // Todo: binding the default data
-
   }
 
   ngOnChanges() {
