@@ -1,3 +1,13 @@
-<p>
-  content works!
-</p>
+<section class="content" >
+ <h4>This is content section </h4>
+
+ <br>
+ <ul class="content-list" *ngFor='let r of results'>
+    <li>
+      {{r.title}}
+      <br>
+     {{r.content}}
+    </li>
+ </ul>
+
+</section>

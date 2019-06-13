@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
+
   "name": "components-architecting",
-=======
-  "name": "data-binding-demo",
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,11 +20,6 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
-<<<<<<< HEAD
-    "bootstrap": "^4.3.1",
-    "ngx-bootstrap": "^4.2.0",
-=======
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

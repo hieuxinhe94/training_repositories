@@ -1,0 +1,8 @@
+.content {
+  height: 500px;
+  width: 60%;
+  float: right;
+  border-style: solid;
+  border: 1px 2px 1px 2px;
+  border-color: brown;
+}

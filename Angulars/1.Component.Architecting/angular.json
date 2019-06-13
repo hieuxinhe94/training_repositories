@@ -3,7 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "ComponentsArchitecting": {
       "projectType": "application",
       "schematics": {
@@ -32,23 +31,11 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "t3h",
-=======
-    "DataBindingDemo": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/ComponentsArchitecting",
-=======
-            "outputPath": "dist/DataBindingDemo",
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,10 +45,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "node_modules/bootstrap/dist/css/bootstrap.css",
-=======
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
               "src/styles.css"
             ],
             "scripts": []
@@ -96,30 +80,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "ComponentsArchitecting:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "ComponentsArchitecting:build:production"
-=======
-            "browserTarget": "DataBindingDemo:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "DataBindingDemo:build:production"
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "ComponentsArchitecting:build"
-=======
-            "browserTarget": "DataBindingDemo:build"
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
           }
         },
         "test": {
@@ -156,28 +128,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-<<<<<<< HEAD
             "devServerTarget": "ComponentsArchitecting:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "ComponentsArchitecting:serve:production"
-=======
-            "devServerTarget": "DataBindingDemo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "DataBindingDemo:serve:production"
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
             }
           }
         }
       }
     }},
-<<<<<<< HEAD
   "defaultProject": "ComponentsArchitecting"
 }
-=======
-  "defaultProject": "DataBindingDemo"
-}
->>>>>>> 00e3f5647c65e355126ebb65368cf872cec6219f
