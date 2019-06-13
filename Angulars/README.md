@@ -11,14 +11,14 @@
  Vì node modules khá nặng, nên github sẽ chặn việc upload thư mục này lên.
  Vậy nên sau khi checkout code về, vui lòng install nodemodules bằng cách:
  
- > Đi vào thư mục dự án
- > Mở Cmd/terminal lên
- > npm install  
- > Sau đó thì build angular project bằng CLI
- > ng build
- > Sau khi ng build sucessed
- > Run ứng dụng bằng cách: 
- > ng serve -o
+ - Đi vào thư mục dự án
+ - Mở Cmd/terminal lên
+``` npm install  ```
+ - Sau đó thì build angular project bằng CLI
+```ng build```
+ - Sau khi ng build sucessed
+ - Run ứng dụng bằng cách: 
+```ng serve -o```
  
 ## Tests
 
@@ -26,9 +26,9 @@
 
 ## Contributors
 
- Trong các bài demo có thể sẽ có những sai sót gì đó. Rất hân hạnh khi được các bạn đóng góp, sửa chữa.
- Ví dụ như thêm readme.md cho từng demo. Hướng dẫn các đoạn code. Fix errors
- You are welcome
+ -Trong các bài demo có thể sẽ có những sai sót gì đó. Rất hân hạnh khi được các bạn đóng góp, sửa chữa.
+ -Ví dụ như thêm readme.md cho từng demo. Hướng dẫn các đoạn code. Fix errors
+ -You are welcome
  
  @Hieu: Pham Van Hieu
 
