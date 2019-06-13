@@ -1,9 +1,0 @@
-<h3>Parent Component</h3>
-<!--keyup-->
-<input #pElement type="text" placeholder="input from parent component" (keyup)="0" />
-<br>
-{{childEventDt}}
-<!--Create a reference to input text of the parent component.-->
-<app-child
-[ParentData]="pElement.value"
-(childEvent)="childEventDt=$event" ></app-child>
