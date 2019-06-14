@@ -1,0 +1,21 @@
+.box-test {
+  border: 1px 1px 1px 1px;
+  border-color: chartreuse;
+  border-style: solid;
+}
+
+table > tr > td:nth-child(1) {
+  width: 30%;
+}
+
+table > tr > td:nth-child(2) {
+  width: 40%;
+}
+
+table > tr > td:nth-child(3) {
+  width: 30%;
+}
+
+table > tr > td {
+  vertical-align: top;
+}
