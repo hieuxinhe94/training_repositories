@@ -9,6 +9,7 @@ import { FormControl, FormBuilder, FormGroup, Validators, ValidationErrors } fro
 export class ReactiveFormComponent implements OnInit {
 
   loginFrm: FormGroup;
+  outputMsg = '';
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -29,24 +30,21 @@ export class ReactiveFormComponent implements OnInit {
   Login() {
     debugger;
     if (!this.loginFrm.valid) {
-      alert('InValid!! :-)' + this.getFormValidationErrors());
+      this.getFormValidationErrors();
       return;
     }
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginFrm.value));
+    this.outputMsg = 'SUCCESS: ' + JSON.stringify(this.loginFrm.value);
   }
 
   getFormValidationErrors() {
-    let messages = '';
+    this.outputMsg = 'InValid';
     Object.keys(this.loginFrm.controls).forEach(key => {
-
       const controlErrors: ValidationErrors = this.loginFrm.get(key).errors;
       if (controlErrors != null) {
         Object.keys(controlErrors).forEach(keyError => {
-          messages += '\n\nKey control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError] + '\n\n';
+          this.outputMsg += '\n\nKey control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError] + '\n\n';
         });
       }
     });
-
-    return messages;
   }
 }
