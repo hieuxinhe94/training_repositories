@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: darkgreen !important; */
+}
+
+.box-test {
+  border: 1px 2px 1px 2px;
+  border-color: red;
+  border-style: solid;
+}
+
+.header {
+  height: 84px;
+  width: 100%;
+}
+
+.content {
+  height: 580px;
+  width: 100%;
+}
+
+.footer {
+  height: 100px;
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+}
+
+.app-boxes {
+  width: 17%;
+  float: right;
+}
+
+.app-boxes > ul > li {
+  display: inline;
+  margin-left: 2.5%;
+  font-size: small;
+}
+
+.header-avatar {
+  /* background-image: url('my-avatar.jpg');
+    background-repeat: no-repeat; */
+  height: 30px;
+  width: auto;
+  border-radius: 50%;
+  margin-left: -22px;
+}
+
+.main-logo {
+  padding-top: 10%;
+}
+
+.search-form {
+  clear: both;
+  width: 100%;
+}
+
+#searchTxt {
+  width: 40%;
+  min-height: 30px;
+  border-radius: 25px;
+  padding: 2px 0 0 10px;
+  border-color: #f5f5f5;
+  border-style: solid;
+  border: 1px 1px 1px 1px;
+
+  background-image: url("googlemic_color_24dp.png");
+  background-repeat: no-repeat;
+  background-position: 97%;
+  background-size: 30px;
+}
+
+#searchTxt:focus {
+  outline: none;
+}
+
+.btn-submit-group {
+  margin-top: 3%;
+  width: 100%;
+}
+
+.btn-submit-group > input[type="submit"] {
+  height: 36px;
+  background-color: #f2f2f2;
+}
+
+/* .btn-submit-group > input:nth-child(1):after {
+    content: 'Google Search';
+}
+
+.btn-submit-group > input:nth-child(2) {
+    content: "I'm Feeling Lucky";
+} */
+
+.footer-line {
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+}
+
+.footer > div:nth-child(1) > span {
+  padding: 30px 2px 1px 2px;
+  font-size: 15px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.54);
+}
