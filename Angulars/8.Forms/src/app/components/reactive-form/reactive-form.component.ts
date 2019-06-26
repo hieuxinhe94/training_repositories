@@ -28,7 +28,7 @@ export class ReactiveFormComponent implements OnInit {
   get f() { return this.loginFrm.controls; }
 
   Login() {
-    debugger;
+
     if (!this.loginFrm.valid) {
       this.getFormValidationErrors();
       return;

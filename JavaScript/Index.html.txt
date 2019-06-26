@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JavaScript getting started</title>
+
+    <script>
+        //******************************************************//
+        // Khai báo mới một biến có tên là [name], giá trị null
+        var name;
+        // Gán giá trị cho biến [name] : null -> 'Nguyen Van A'
+        name = 'Nguyen Van A';
+
+        // Vừa khai báo mới biến, đồng thời gán luôn giá trị
+        var schoolName = 'Harvard';
+
+        //******************************************************//
+        // Khai báo array:
+        var students = ['student A', 'student B', 'student C', 'student D'];
+        // hoặc thông qua lớp Array
+        var products = new Array('product A', 'product B', 'product C', 'product D');
+
+        //******************************************************//
+        Array.prototype.likeOrShare = 'Test prototype';
+
+        //******************************************************//
+        var firstProduct = products[0];
+        var lastProduct = products[products.length - 1];
+
+        // debugger;
+
+        // Xóa phần tử cuối cùng
+        products.pop();
+        // Thêm mới phần tử vào cuối
+        products.push(lastProduct);
+
+        // Xóa phần tử đầu tiên
+        products.shift();
+        // Thêm mới phần tử vào đầu tiên
+        products.unshift(firstProduct);
+
+        //******************************************************//
+        // 1. In các số lẻ từ 1-100;
+
+        for (let index = 1; index < 100; index += 2) {
+            console.log(index);
+        }
+
+        var index = 1;
+        while (index <= 100) {
+            console.log(index);
+            index += 2;
+        }
+
+        index = 1;
+        do {
+            console.log(index);
+            index += 2;
+        }
+        while (index <= 100)
+
+        var collection = new Array(50);
+        collection.forEach(element => {
+            console.log(element.index * 2);
+        });
+
+        // 2. Cho a= 1, b=2, c=1; Giải phương trình bậc 2: ax2 + bx + x = 0
+
+        function GiaiPtBac2(_a, _b, _c) {
+            // delta = b^b - 2*a*b
+            let delta = Math.pow(_b, 2) - 4 * a * c;
+
+            let result = 'Result: ';
+            // condition
+            if (delta < 0) {
+                result += 'PT vo nghiem';
+            }
+            else if (delta == 0) {
+                const resolve = -b / (2 * a);
+                result += 'PT co 2 nghiem kep :' + resolve;
+            }
+            else {
+                const resolve1 = (-b + Math.sqrt(delta)) / (2 * a);
+                const resolve2 = (-b - Math.sqrt(delta)) / (2 * a);
+                result += 'PT co 2 nghiem:' + resolve1 + ' va ' + resolve2;
+            }
+
+            return result;
+        }
+
+        var a = 1, b = 2, c = 1;
+        console.log(GiaiPtBac2(a, b, c));
+
+    </script>
+</head>
+
+<body>
+    <div>
+    </div>
+</body>
+
+</html>

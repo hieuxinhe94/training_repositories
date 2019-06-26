@@ -1,29 +1,36 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="100" alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <img width="100" alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </div>
+  <h2>Pipes are used to transform data, when we only need that data transformed in a template.</h2>
+
+  <p>
+    If we need the data transformed generally we would implement it in our model, for example we have a number 1234.56
+    and
+    want to display it as a currency such as $1,234.56.
+  </p>
+
+  <div class="row">
+
+    <table style="width: 100%;">
+      <tr>
+        <td class="box-test">
+          <app-built-in-pipe></app-built-in-pipe>
+        </td>
+        <td class="box-test">
+          <!-- <app-async-pipe> </app-async-pipe> -->
+        </td>
+        <td class="box-test">
+          <app-image> </app-image>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
 </div>
-<h2>Pipes are used to transform data, when we only need that data transformed in a template.</h2>
-
-<p>
-  If we need the data transformed generally we would implement it in our model, for example we have a number 1234.56 and
-  want to display it as a currency such as $1,234.56.
-</p>
-
-<table style="width: 100%;">
-  <tr>
-    <td class="box-test">
-      <app-built-in-pipe></app-built-in-pipe>>
-    </td>
-    <td class="box-test" >
-      <app-async-pipe> </app-async-pipe>
-    </td>
-    <td class="box-test">
-      <app-custom-pipe> </app-custom-pipe>
-    </td>
-  </tr>
-
-</table>

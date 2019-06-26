@@ -1,15 +1,27 @@
 <h4 class="card-title">Currency</h4>
+
 <div class="card-text">
-  <p ngNonBindable>{{ 1234.56 | currency:'CAD' }}</p>
-  <p>{{ 1234.56 | currency:"CAD" }}</p>
-  <p ngNonBindable>{{ 1234.56 | currency:'CAD':'code' }}</p>
-  <p>{{ 1234.56 | currency:'CAD':'code'}}</p>
-  <p ngNonBindable>{{ 1234.56 | currency:'CAD':'symbol' }}</p>
-  <p>{{ 1234.56 | currency:'CAD':'symbol'}}</p>
-  <p ngNonBindable>{{ 1234.56 | currency:'CAD':'symbol-narrow' }}</p>
-  <p>{{ 1234.56 | currency:'CAD':'symbol-narrow'}}</p>
+  <p ngNonBindable>{{ 1234.56 | currency:'USD' }}</p>
+  <p>{{ 1234.56 | currency:'USD' }}</p>
+
+  <p ngNonBindable>{{ 1234.56 | currency:'EUR' }}</p>
+  <p>{{ 1234.56 | currency:'EUR' }}</p>
+
+  <p ngNonBindable>{{ 1234.56 | currency:'VND' }}</p>
+  <p>{{ 1234.56 | currency:'VND' }}</p>
 </div>
 
+<div class="card card-block">
+  <p ngNonBindable>{{ dateVal | date: 'shortTime' }}</p>
+  <p>{{ dateVal | date: 'shortTime' }}</p>
+
+
+
+</div>
+
+
+
+<!--
 <div class="card card-block">
   <h4 class="card-title">Date</h4>
   <div class="card-text">
@@ -23,6 +35,7 @@
     <p>{{ dateVal | date: 'd/M/y' }}</p>
   </div>
 </div>
+
 <div class="card card-block">
   <div class="card-text">
     <h4 class="card-title">DecimalPipe</h4>
@@ -76,11 +89,11 @@
     <p ngNonBindable>{{ [1,2,3,4,5,6] | slice:2:-1 }}</p>
     <p>{{ [1,2,3,4,5,6] | slice:2:-1 }}</p>
     <pre ngNonBindable>
-&lt;ul&gt;
-  &lt;li *ngFor=&quot;let v of [1,2,3,4,5,6] | slice:2:-1&quot;&gt;
-    {{v}}
-  &lt;/li&gt;
-&lt;/ul&gt;
+      &lt;ul&gt;
+        &lt;li *ngFor=&quot;let v of [1,2,3,4,5,6] | slice:2:-1&quot;&gt;
+          {{v}}
+        &lt;/li&gt;
+      &lt;/ul&gt;
     </pre>
     <ul>
       <li *ngFor="let v of [1,2,3,4,5,6] | slice:2:-1">
@@ -88,4 +101,4 @@
       </li>
     </ul>
   </div>
-</div>
+</div> -->

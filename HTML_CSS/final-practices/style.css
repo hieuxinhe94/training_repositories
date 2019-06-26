@@ -1,0 +1,34 @@
+.box-test {
+  border: 1px;
+  border-color: red;
+  border-style: solid;
+}
+
+header {
+  height: 500px;
+}
+
+header > div:nth-child(1) {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: darkgray;
+}
+
+footer {
+  height: 150px;
+}
+
+.feature-posts {
+  margin: 35px 1px 10px 1px;
+  height: 275px;
+}
+
+.nav-top
+{
+    width: 100%;
+}
+.nav-top > a {
+    
+    font-size: 14px;
+    width: 10%;
+}
