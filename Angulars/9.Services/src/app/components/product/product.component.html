@@ -1,0 +1,20 @@
+<h1>Products</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let policy of policies" >
+    <td>{{ policy.num }}</td>
+    <td>{{ policy.amount }}</td>
+    <td>{{ policy.description }}</td>
+
+    <td>
+    <button (click)="">Delete</button>
+    <button (click)="">Update</button>
+    </td>
+  </tr>
+</table>
