@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ValidationErrors } from '@angular/forms';
+import { Utilities } from 'src/app/Utils/custom-validator';
 
 @Component({
   selector: 'app-register',
@@ -46,7 +47,7 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.email]],
-      birthDate: ['', [Validators.pattern('\d+-\d+-\d+')]],
+      birthDate: ['', [Utilities.birthDateValidate]],
       gender: [''],
     });
   }
@@ -74,5 +75,6 @@ export class RegisterComponent implements OnInit {
         });
       }
     });
+  }
   //#endregion
 }
