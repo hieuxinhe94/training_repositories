@@ -85,7 +85,7 @@
                     [ngClass]="{ 'is-invalid': submitted && registerForm.controls.birthDate.errors }" />
 
                   <div *ngIf="submitted && registerForm.controls.birthDate.errors" class="text-danger">
-                    <div *ngIf="registerForm.controls.birthDate.errors.pattern">Date must is valid pattern yyyy-dd-MM
+                    <div *ngIf="registerForm.controls.birthDate.errors.myCustomError">Date must is valid pattern yyyy-dd-MM
                     </div>
                   </div>
                 </div>

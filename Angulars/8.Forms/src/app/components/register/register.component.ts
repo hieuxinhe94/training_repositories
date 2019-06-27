@@ -85,7 +85,7 @@ export class RegisterComponent implements OnInit {
       return null;
     }
     return {
-      pattern: true
+      myCustomError: true
     };
   }
 
