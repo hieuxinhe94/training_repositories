@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ValidationErrors } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ValidationErrors, FormControl } from '@angular/forms';
 import { Utilities } from 'src/app/Utils/custom-validator';
 
 @Component({
@@ -47,7 +47,8 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.email]],
-      birthDate: ['', [Utilities.birthDateValidate]],
+      // Custom validate  this.birthDateValidate
+      birthDate: ['', [this.birthDateValidate]],
       gender: [''],
     });
   }
@@ -76,5 +77,17 @@ export class RegisterComponent implements OnInit {
       }
     });
   }
+
+  birthDateValidate(control: FormControl) {
+    const birthDate = control.value;
+    const regexpDate = new RegExp(/^\d{4}-\d{2}-\d{2}/);
+    if (birthDate && regexpDate.test(birthDate)) {
+      return null;
+    }
+    return {
+      pattern: true
+    };
+  }
+
   //#endregion
 }
