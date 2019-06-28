@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,10 @@ export class WeatherService {
       + '&APPID=' + this.API_KEY);
   }
 
+  public getDailyWeathersWithObservable(cityname: string, cnt: number): Observable<any> {
+    return this.httpClient.get(this.SERVER_URL
+      + '?q=' + cityname
+      + '&mode=json&units=metric&cnt=' + cnt
+      + '&APPID=' + this.API_KEY);
+  }
 }

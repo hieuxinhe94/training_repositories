@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JavaScript getting DOM practices</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        //******************************************************//
+
+    </script>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <!--Inputs form-->
+            <div class="col-6">
+                <form id="login">
+                    <div class="form-group">
+                        <input name="username" value="Hello" placeholder="Input your name" class="form-control">
+                    </div>
+                </form>
+            </div>
+
+            <!--Logs-->
+            <div id="alerts" class="col-6">
+                <div id="namelbl" class="alert alert-primary" role="alert"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    var events = [];
+
+    // Lấy dữ liệu trong cookies nếu có sẵn:
+    var cookies = document.cookie;
+
+    let cookieArr = cookies.split(';');
+
+    if (cookieArr) {
+        cookieArr.forEach((item) => {
+            let keyVal = item.split('=');
+
+            // check cookie name
+            if (keyVal[0] === 'events') {
+
+                // extract cookie events values
+                events = keyVal[1];
+            }
+        });
+    }
+
+    let lastEvents = window.localStorage.getItem('events');
+    if (lastEvents) {
+        debugger;
+        events = lastEvents.split(',');
+        eventLog();
+    }
+
+    // Lấy các elements có name = username
+    var nameElement = document.getElementsByName('username');
+
+    // Kiểm tra null/undefine
+    if (nameElement) {
+
+        // Lấy giá trị của nameElement đầu tiên;
+        const username = nameElement[0].value;
+
+        // Lấy element có Id = namelbl
+        let lblName = document.getElementById('namelbl');
+
+        // Kiểm tra null/ undefine
+        if (lblName) {
+
+            // Thay đổi nội dung text bên trong lblName element.
+            lblName.innerText = "Your user name:" + username;
+        }
+    }
+
+    // Định nghĩa method cập nhật lại view
+    function eventLog() {
+
+        var alertElement = document.getElementById('alerts');
+
+        events.forEach((item) => {
+            alertElement.innerHTML
+                += '<div class="alert alert-primary" role="alert">' + item + '</div>';
+        });
+
+        events = [];
+    }
+
+    // Định nghĩa trước Các sự kiện trên DOM functions:
+
+    // Khi chuột được rê vào element
+    function onMouseOver() {
+        events.push("onMouseOver excuted");
+    }
+
+    // Khi chuột phải click
+    function onContextMenu() {
+        events.push("onContextMenu excuted");
+
+        eventLog();
+    }
+
+    // Khi chuột đi ra ngoài
+    function onMouseOut() {
+        events.push("onMouseOut excuted");
+    }
+
+    // Thiết lập các sự kiện tương ứng với các functions
+
+    var page = document.getElementsByTagName('body');
+
+    page[0].addEventListener("mouseover", onMouseOver);
+    page[0].addEventListener("contextmenu", onContextMenu);
+    page[0].addEventListener("mouseout", onMouseOut);
+
+    // Thiết lập sự kiện trên form
+    var logInFrm = document.getElementById('login');
+
+    logInFrm.onsubmit = function () {
+        events.push("OnSubmit excuted");
+
+        debugger;
+        // Lấy ra cookies property của DOM
+        var cookies = document.cookie;
+
+        // test
+        cookies = "name=value ; ";
+
+        // Add events data to cookie
+        cookies += "events=" + events + " ;";
+
+        document.cookie = cookies;
+
+        // Set them localstorage property
+        window.localStorage.setItem('events', events);
+    }
+
+
+</script>
+
+</html>

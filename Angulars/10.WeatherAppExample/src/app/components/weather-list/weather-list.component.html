@@ -1,10 +1,47 @@
 <div *ngIf="weatherData" class="row">
-  <div class=" col-3">
-   <input class="form-control" name="cityname" [(ngModel)]="cityName" (change)="changeCity()" >
+  <div class=" col-1">
+    ToPromise
   </div>
-  <button type="button" class="col-3 btn btn-primary">Wind Speed<span *ngIf="weatherData.wind"
+  <div class=" col-3">
+    <input class="form-control" name="cityname" [(ngModel)]="cityName" (change)="changeCity()">
+  </div>
+  <button *ngIf="weatherData.wind" type="button" class="col-3 btn btn-primary">Wind Speed &nbsp;<span
       class="badge badge-light">{{ weatherData.wind.speed}}</span></button>
 
-  <button *ngFor="let w of weatherData.weather" type="button" class="col-6 btn btn-success">description <span
+  <button *ngFor="let w of weatherData.weather" type="button" class="col-5 btn btn-success">description <span
       *ngIf="w.description" class="badge badge-light">{{w.main}} - {{w.description}}</span></button>
+</div>
+
+
+<div *ngIf="weatherData2" class="row">
+  <div class=" col-1">
+    Observable
+  </div>
+  <div class=" col-3">
+    <input class="form-control" name="cityname" [(ngModel)]="cityName" (change)="changeCity()">
+  </div>
+  <button *ngIf="weatherData2.wind" type="button" class="col-3 btn btn-primary">Wind Speed &nbsp;<span
+      class="badge badge-light">{{ weatherData2.wind.speed}}</span></button>
+
+  <button *ngFor="let w of weatherData2.weather" type="button" class="col-5 btn btn-success">description
+    <span *ngIf="w.description" class="badge badge-light">{{w.main}} - {{w.description}}</span></button>
+</div>
+
+<div *ngIf="asyncWeatherResultObservable | async"  class="row">
+  <div class=" col-1">
+    Async
+  </div>
+  <div class=" col-3">
+    <input class="form-control" name="cityname" [(ngModel)]="cityName" (change)="changeCity()">
+  </div>
+
+    <button type="button" class="col-3 btn btn-primary">Wind Speed &nbsp;<span
+        class="badge badge-light">{{(asyncWeatherResultObservable | async)?.wind.speed}}</span>
+    </button>
+
+    <button *ngFor="let w of (asyncWeatherResultObservable | async)?.weather" type="button"
+      class="col-5 btn btn-success">description
+      <span class="badge badge-light">{{w.main}} - {{w.description}}</span>
+    </button>
+
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-weather-list',
@@ -10,11 +11,15 @@ export class WeatherListComponent implements OnInit {
 
   cityName = 'London,uk';
   weatherData: any;
+  weatherData2: any;
+  asyncWeatherResultObservable: Observable<any>;
 
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
     this.querryWeatherData();
+    this.querryWeatherDataObservable();
+    this.querryWeatherDataObservableAsync();
   }
 
   changeCity() {
@@ -40,4 +45,23 @@ export class WeatherListComponent implements OnInit {
           console.log('init Weather Data');
         });
   }
+
+   querryWeatherDataObservable() {
+    this.weatherService.getDailyWeathers(this.cityName, 16)
+      .subscribe(async (res) => {
+        await this.delay(5 * 1000);
+        this.weatherData2 = res;
+      });
+  }
+
+  async querryWeatherDataObservableAsync() {
+    await this.delay(2 * 1000);
+    this.asyncWeatherResultObservable =
+    this.weatherService.getDailyWeathersWithObservable(this.cityName, 16);
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 }
