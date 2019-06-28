@@ -22,13 +22,16 @@ export class WeatherListComponent implements OnInit {
     this.querryWeatherDataObservableAsync();
   }
 
+  // Change input value event call
   changeCity() {
     if (this.cityName && this.cityName.length) {
       this.querryWeatherData();
+      this.querryWeatherDataObservable();
+      this.querryWeatherDataObservableAsync();
     }
   }
 
-  // init data
+  // Promise
   querryWeatherData() {
     this.weatherService.getDailyWeathers(this.cityName, 16)
       .toPromise()
@@ -46,6 +49,7 @@ export class WeatherListComponent implements OnInit {
         });
   }
 
+  // Obversable
    querryWeatherDataObservable() {
     this.weatherService.getDailyWeathers(this.cityName, 16)
       .subscribe(async (res) => {
@@ -54,12 +58,14 @@ export class WeatherListComponent implements OnInit {
       });
   }
 
+  // Async Obversable
   async querryWeatherDataObservableAsync() {
     await this.delay(2 * 1000);
     this.asyncWeatherResultObservable =
     this.weatherService.getDailyWeathersWithObservable(this.cityName, 16);
   }
 
+  // Helper function to delay
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
