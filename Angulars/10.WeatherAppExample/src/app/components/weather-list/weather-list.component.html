@@ -1,0 +1,10 @@
+<div *ngIf="weatherData" class="row">
+  <div class=" col-3">
+   <input class="form-control" name="cityname" [(ngModel)]="cityName" (change)="changeCity()" >
+  </div>
+  <button type="button" class="col-3 btn btn-primary">Wind Speed<span *ngIf="weatherData.wind"
+      class="badge badge-light">{{ weatherData.wind.speed}}</span></button>
+
+  <button *ngFor="let w of weatherData.weather" type="button" class="col-6 btn btn-success">description <span
+      *ngIf="w.description" class="badge badge-light">{{w.main}} - {{w.description}}</span></button>
+</div>
