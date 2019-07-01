@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WeatherListComponent } from './components/weather-list/weather-list.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherDetailComponent } from './components/weather-detail/weather-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherListComponent
+    WeatherListComponent,
+    WeatherDetailComponent
   ],
   imports: [
     HttpClientModule,

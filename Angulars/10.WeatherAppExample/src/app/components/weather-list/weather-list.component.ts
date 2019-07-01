@@ -37,7 +37,11 @@ export class WeatherListComponent implements OnInit {
       .toPromise()
       .then(
         (res) => {
+
           this.weatherData = res;
+
+          // save data to local
+          this.weatherService.save(res);
         })
       .catch(
         (err) => {
