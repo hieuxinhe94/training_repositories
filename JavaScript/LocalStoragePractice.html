@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lưu trữ dữ liệu trang web bằng localstorage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        #loginFrm {
+            display: none;
+            align-content: center;
+        }
+
+        #logout {
+            display: none;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row" style="margin-top: 200px;">
+            <div class="col-3"></div>
+            <div class="col-6">
+
+                <form id="loginFrm" class="form-group" onsubmit="login()">
+
+                    <input name="username" type="text" class="form-control" placeholder="Enter your name, plz" />
+
+                    <input class="btn btn-success" type="submit" value="Submit" />
+                </form>
+
+                <section id="logout" onclick="logout()">
+                    <a href="#">Logout </a>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Khai báo các constants - hằng số của ứng dụng:
+    const LOGIN_KEY = 'LAST_LOGINED_USER';
+
+    var loginFrmEl = document.getElementById('loginFrm');
+    var logoutSection = document.getElementById('logout');
+
+    // Kiểm tra trạng thái đăng nhập trước đó
+    if (checkLogined()) {
+        // Nếu có -> Bỏ qua thao tác đăng nhập
+        loginFrmEl.style.display = "none";
+        // Hiển thị LogOut section
+        logoutSection.style.display = 'block';
+    }
+    // Nếu không: Hiện Login form
+    else {
+        loginFrmEl.style.display = "block";
+        logoutSection.style.display = 'none';
+    }
+
+    function checkLogined() {
+        // Lấy người dùng gần nhất đăng nhập
+        const lastUser = localStorage.getItem(LOGIN_KEY);
+        // Kiểm tra xem giá trị dữ liệu có hợp lệ hay không
+        const isExists = (lastUser !== null);
+        // Trả về bool (yes/no) đã được đăng nhập.
+        return isExists;
+    }
+
+    function saveLogin(nameToSave) {
+        // Thêm mới hoặc ghi đè dữ liệu đăng nhập của người dùng
+        localStorage.setItem(LOGIN_KEY, nameToSave);
+    }
+
+    function clearLogin() {
+        // Xóa bỏ mọi dữ liệu đăng nhập người dùng
+        localStorage.removeItem(LOGIN_KEY);
+        // localStorage.clear() để xóa toàn bộ
+    }
+
+    /// Định nghĩa các sự kiện trên trang
+
+    // Đăng nhập
+    function login() {
+     
+        // Lấy input có <name> = 'username>'
+        let userNameElements = document.getElementsByName('username');
+
+        // Kiểm tra null
+        if (userNameElements && userNameElements.length > 0) {
+            const username = userNameElements[0].value;
+
+            // Nghiệp vụ kiểm tra đầu vào có hợp lệ hay không?
+            if (username.length <= 3) return;
+
+            // Vượt qua kiểm tra đăng nhập -> Lưu lại
+            saveLogin(username);
+
+            // Chuyển tiếp người dùng tới màn hình khác
+            location.reload(); // <- Tải lại trang hiện tại
+        }
+    }
+
+    // Đăng xuất
+    function logout() {
+        // Xóa bỏ các dữ liệu người dùng hiện tại trên trình duyệt
+        clearLogin();
+        location.reload(); // <- Tải lại trang hiện tại
+    }
+
+</script>
+
+</html>

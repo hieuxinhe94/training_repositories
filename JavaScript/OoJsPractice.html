@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành khởi tạo đối tượng với javascript</title>
+</head>
+<script>
+    // Khai báo lớp Student bằng 2 cách
+
+    // Cách số 1:  Khai báo tường minh:
+    var objStudent1 = new Object();
+    objStudent1.Name = 'Nguyen Van A';
+    objStudent1.age = 19;
+
+    objStudent1.learn = function (_subject) {
+        objStudent1.learned += _subject;
+        console.log('learn 1 excuted: ' + _subject);
+    }
+    // Cách số 2: Khai báo ngắn gọn:
+
+    var objStudent2 = {
+        Name: 'Nguyen Van B',
+        age: 20,
+        learn: function (_subject) {
+            objStudent2.learned += _subject;
+            console.log('learn 2 excuted: ' + _subject);
+        }
+    };
+
+
+    // Khai báo lớp Teacher
+
+    function Teacher(name, age, gender) {
+        this.Name = name;
+
+        if (0 < age && age < 100) {
+            this.Age = age;
+        } else {
+            this.Age = 0;
+        }
+
+        if (gender === true) {
+            this.Gender = 'Man';
+        }
+        else if (gender === false) {
+            this.Gender = 'Women';
+        }
+        else {
+            this.Gender = 'Other';
+        }
+
+        this.teach = function (_subject) {
+            console.log(' Teacher ' + this.Name + ' teach: ' + _subject);
+        }
+    }
+
+    var objTeacher1 = new Teacher('AAA', 19, true);
+    
+    var objTeacher1 = new Teacher('AAA', -99999, 'UnKnown');
+    // Khai báo lớp Class
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
