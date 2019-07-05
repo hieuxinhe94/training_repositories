@@ -13,11 +13,12 @@ export class WeatherDetailComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
-    this.weatherService.getData.subscribe((value) => {
-      if (value) {
-        this.item = value.coord;
-      }
-    });
+    this.weatherService.getData.subscribe(
+      (newValue) => {
+        if (newValue) {
+          this.item = newValue.coord;
+        }
+      });
   }
 
 }
