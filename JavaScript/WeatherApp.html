@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div> Section 1</div>
+    <div id="content">Old value</div>
+    <div id="weather"> Section 2</div>
+</body>
+
+<script>
+
+    // Khai báo khởi tạo object XMLHttpRequest
+    var xhttp = new XMLHttpRequest();
+
+    // Thực thi đoạn code khi có thay đổi về status của xhttp
+    xhttp.onreadystatechange = function () {
+        // Khi status == 200 (Yêu cầu được trả về OK)
+        if (this.status == 200) {
+            // Cập nhật lại nội dung của trang web
+            document.getElementById('content').innerText = this.responseText;
+        }
+        // Khi status != 0 (Yêu cầu trả về không hợp lệ)
+        else if (this.status != 0) {
+            console.log('Status is not valid: ' + this.status);
+        }
+        // Khi status = 0 (request khởi tạo)
+        else {
+            console.log('Request sending...');
+        }
+    }
+
+    xhttp.open("GET", "test.txt", true);
+    xhttp.send();
+
+    // Bài tập hiển thị dữ liệu thời tiết
+    const URL = "http://api.openweathermap.org/data/2.5/weather?q=Ha Noi&APPID=180f734ca78125afb021e7f1d162f4a2";
+
+    var xhttp2 = new XMLHttpRequest();
+
+    // Thực thi đoạn code khi có thay đổi về status của xhttp
+    xhttp2.onreadystatechange = function () {
+        // Khi status == 200 (Yêu cầu được trả về OK)
+        if (this.response && this.status == 200) {
+            // Cập nhật lại nội dung của trang web
+            var weatherRes = JSON.parse(this.response);
+            document.getElementById('weather').innerHTML =
+                '<h1>' + weatherRes.name + '</h1>'
+                + '<br/>  <p> Nhiệt độ :' + weatherRes.main.temp + ' </p>';
+        }
+    }
+
+    xhttp2.open("GET", URL, true);
+    xhttp2.send();
+
+
+</script>
+
+</html>

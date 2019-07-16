@@ -1,24 +1,15 @@
 ## Synopsis / Tóm tắt
 
- Repository này được dùng để lưu trữ demo các bài thực hành về angular.	
+ Repository này được dùng để lưu trữ demo các bài thực hành về TypeScript.	
  
 ## Folders/ Các thư mục
 
  Nội dung các practice được sắp xếp từ 1->n.
 
 ## Installation/ Cài đặt và run
-
- Vì node modules khá nặng, nên github sẽ chặn việc upload thư mục này lên.
- Vậy nên sau khi checkout code về, vui lòng install nodemodules bằng cách:
- 
- > Đi vào thư mục dự án
- > Mở Cmd/terminal lên
- > npm install  
- > Sau đó thì build angular project bằng CLI
- > ng build
- > Sau khi ng build sucessed
- > Run ứng dụng bằng cách: 
- > ng serve -o
+	Install TS bằng NPM:
+	> npm install -g typescript
+	
  
 ## Tests
 
