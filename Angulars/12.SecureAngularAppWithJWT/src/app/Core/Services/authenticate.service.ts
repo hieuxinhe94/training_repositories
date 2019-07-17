@@ -20,7 +20,7 @@ export class AuthenticateService {
         // login successful if there's a jwt token in the response
         if (user && user.token) {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify(user));
+          localStorage.setItem(Config.LOGINED_USER_KEY, JSON.stringify(user));
           this.currentUser.next(user);
         }
 
@@ -30,7 +30,7 @@ export class AuthenticateService {
 
   logout() {
     // remove user from local storage to log user out
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem(Config.LOGINED_USER_KEY);
     this.currentUser.next(null);
   }
 
@@ -39,8 +39,15 @@ export class AuthenticateService {
   }
 
   get isLogined() {
+    debugger;
     if (this.currentUser.value) {
       return true;
+    } else {
+      const lastUser: User = JSON.parse(localStorage.getItem(Config.LOGINED_USER_KEY));
+      if (lastUser && lastUser.token) {
+        this.currentUser.next(lastUser);
+        return true;
+      }
     }
     return false;
   }
