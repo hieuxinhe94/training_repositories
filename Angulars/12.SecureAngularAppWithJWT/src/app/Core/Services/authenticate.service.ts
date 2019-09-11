@@ -15,7 +15,8 @@ export class AuthenticateService {
 
   login(username: string, password: string) {
 
-    return this.http.post<any>(`${Config.PREFIX_URL}/LogIn/authenticate`, { username, password })
+    return this.http.post<any>(`${Config.PREFIX_URL}/LogIn/authenticate`,
+     { username, password })
       .pipe(map(user => {
         // login successful if there's a jwt token in the response
         if (user && user.token) {
@@ -34,12 +35,15 @@ export class AuthenticateService {
     this.currentUser.next(null);
   }
 
+  test() {
+   return this.http.get<any>(Config.PREFIX_URL + '/LogIn');
+  }
+
   get getCurrentUser() {
     return this.currentUser.asObservable();
   }
 
   get isLogined() {
-    debugger;
     if (this.currentUser.value) {
       return true;
     } else {

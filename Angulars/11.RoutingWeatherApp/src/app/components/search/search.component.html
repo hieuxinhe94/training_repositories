@@ -1,38 +1,38 @@
 <section class="row">
-  <div class="row">
-    <form class="form-inline" (onsubmit)="onSearch(search.value)">
-      <div class="form-group">
-        <input type="search" class="form-control" placeholder="Enter search string" #search>
-      </div>
-      <input type="submit" value="Search" class="btn btn-primary" (click)="onSearch(search.value)">
-    </form>
-  </div>
-  <hr />
+    <div class="row">
+        <form class="form-inline" (onsubmit)="onSearch(search.value);">
+            <div class="form-group">
+                <input type="search" class="form-control" placeholder="Enter search string" #search>
+            </div>
+            <input type="submit" value="Search" class="btn btn-primary" (click)="onSearch(search.value)">
+        </form>
+    </div>
+    <hr />
 
-  <div class=" row text-center">
-    <p class="lead" *ngIf="loading">Loading...</p>
-  </div>
-
-  <div *ngIf=" (loading == false && weather)" class="row">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">City Name</h5>
-        <p class="card-text">{{weather.city}}</p>
-      </div>
+    <div class=" row text-center">
+        <p class="lead" *ngIf="loading">Loading...</p>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Temp</h5>
-        <p class="card-text">{{weather.temp}}</p>
-      </div>
-    </div>
+    <div *ngIf=" (loading == false && weather)" class="row">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">City Name</h5>
+                <p class="card-text">{{weather.city}}</p>
+            </div>
+        </div>
 
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Description</h5>
-        <p class="card-text">{{weather.weather}}</p>
-      </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Temp</h5>
+                <p class="card-text">{{weather.temp}}</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">{{weather.weather}}</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

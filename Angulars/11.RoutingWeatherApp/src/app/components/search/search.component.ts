@@ -18,11 +18,15 @@ export class SearchComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) {
 
+    debugger;
     this.route.params.subscribe(params => {
       if (params.cityName) {
         this.doSearch(params.cityName);
       }
     });
+
+    const tmp = this.route.params['cityName'];
+
   }
 
   ngOnInit() {
@@ -34,17 +38,17 @@ export class SearchComponent implements OnInit {
       (res) => {
         this.weather = this.convertToViewModel(res);
         this.loading = false;
-       }
+      }
     );
   }
 
   convertToViewModel(res: any) {
-     const ret = new Weather(res.name, res.main.temp, res.weather[0].description);
-     return ret;
+    const ret = new Weather(res.name, res.main.temp, res.weather[0].description);
+    return ret;
   }
 
   onSearch(term: string) {
-    debugger;
     this.router.navigate(['search', { cityName: term }]);
+    return false;
   }
 }

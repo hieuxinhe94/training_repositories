@@ -14,6 +14,12 @@ export class DashboardComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+
+    this.authenticateService.test().toPromise();
+
+    this.authenticateService.test().toPromise();
+
+    this.authenticateService.test().toPromise();
   }
 
   logout() {

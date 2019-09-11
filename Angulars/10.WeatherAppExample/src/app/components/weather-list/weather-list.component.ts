@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class WeatherListComponent implements OnInit {
 
   cityName = 'London,uk';
-  weatherData: any;
-  weatherData2: any;
+  promiseData: any;
+  observableData: any;
   asyncWeatherResultObservable: Observable<any>;
 
   constructor(private weatherService: WeatherService) { }
@@ -37,9 +37,7 @@ export class WeatherListComponent implements OnInit {
       .toPromise()
       .then(
         (res) => {
-
-          this.weatherData = res;
-
+          this.promiseData = res;
           // save data to local
           this.weatherService.save(res);
         })
@@ -54,11 +52,11 @@ export class WeatherListComponent implements OnInit {
   }
 
   // Obversable
-   querryWeatherDataObservable() {
+  querryWeatherDataObservable() {
     this.weatherService.getDailyWeathers(this.cityName, 16)
-      .subscribe(async (res) => {
-        await this.delay(5 * 1000);
-        this.weatherData2 = res;
+      .subscribe((res) => {
+        this.delay(5 * 1000);
+        this.observableData = res;
       });
   }
 
@@ -66,7 +64,7 @@ export class WeatherListComponent implements OnInit {
   async querryWeatherDataObservableAsync() {
     await this.delay(2 * 1000);
     this.asyncWeatherResultObservable =
-    this.weatherService.getDailyWeathersWithObservable(this.cityName, 16);
+      this.weatherService.getDailyWeathersWithObservable(this.cityName, 16);
   }
 
   // Helper function to delay

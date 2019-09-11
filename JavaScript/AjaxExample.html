@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color:rebeccapurple; color: white; font-size: 50px;">
+    <div class="container">
+        <div class="row" style="margin-top: 10vh">
+            <div class="col-4">
+                <input id="btnUpdate" class="btn btn-primary" type="submit" value="Update Content" />
+            </div>
+            <div class="col-8">
+                <P id="content">
+                    Old content!
+                </P>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // 1. Thiết lập sự kiện khi nhấn vào btnUpdate
+    debugger;
+    const btnUpdate = document.getElementById('btnUpdate');
+
+    btnUpdate.onclick = function() {
+        // call tới function getData()
+        updateView();
+    }
+
+    function updateContentView(data) {
+        // Cập nhật lại nội dung trên trang
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = data;
+    }
+
+    function updateView() {
+
+        let res = '';
+
+        // 2. Khởi tạo new XMLHttpRequest object.
+        var xhttp = new XMLHttpRequest();
+
+        // 3. Xử lý các trường hợp response có thể có từ server
+        //  (Tham khảo code sample)
+        xhttp.onreadystatechange = function() {
+
+            //  if (this.status == 200) {
+            if (this.readyState == 4) {
+                updateContentView(this.responseText);
+            }
+        }
+
+        // 4. Gửi request đi
+        xhttp.open("GET", "https://gist.githubusercontent.com/hieuxinhe94/b3563e635d05950f2256bc693f304a7b/raw/a150459f4772de336070cc94fff62ee4a493a980/test.txt")
+        xhttp.send();
+
+        return res;
+    }
+
+
+    // BTVN: 
+    // Dùng API của bài WeatherApp
+    // Lấy dữ liệu thời tiết, bằng cách truyền tham số cho URL 
+    // Từ ô input tên thành phố
+</script>
+
+</html>

@@ -3,6 +3,7 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import { User } from '../Models/user';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Config } from '../config';
 
 @Injectable()
 export class CustomHttpInterceptor implements HttpInterceptor {
@@ -10,16 +11,17 @@ export class CustomHttpInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler)
     : Observable<HttpEvent<any>> {
-    // add authorization header with jwt token if available
-      this.authenticateService.getCurrentUser.subscribe((value) => {
-      if (value && value.token) {
-        req = req.clone({
-          setHeaders: {
-            Authorization: `Bearer ${value.token}`
-          }
-        });
-      }
-    });
-      return next.handle(req);
+    debugger;
+    // Get token key from local storage
+    const lastUser: User = JSON.parse(localStorage.getItem(Config.LOGINED_USER_KEY));
+
+    if (lastUser && lastUser.token) {
+      // add jwt to authorization header
+      req = req.clone({
+        setHeaders: { Authorization: 'Bearer ' + lastUser.token }
+      });
+    }
+
+    return next.handle(req);
   }
 }

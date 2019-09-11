@@ -1,0 +1,11 @@
+<div *ngIf="data" class="row">
+    <div class="col-2"></div>
+    <div class="card col-9">
+        <h5 class="card-header">The weather at {{ data.city }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">Temperature: {{ data.temp }}</h5>
+            <p class="card-text">Description: {{ data.description }}</p>
+            <p>{{ data.weather.main }}</p>
+        </div>
+    </div>
+</div>

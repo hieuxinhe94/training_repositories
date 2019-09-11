@@ -1,0 +1,45 @@
+<form class="form" [formGroup]="registerFrm" (submit)="onSubmit()">
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="firstName">First Name</label>
+      <input formControlName="firstName" type="text" class="form-control" placeholder="First Name" />
+      <div *ngIf="f.firstName.errors">
+        <span class="text-danger" *ngIf="f.firstName.errors.required"> Required error</span>
+        <span class="text-danger" *ngIf="f.firstName.errors.minlength"> Minlength >= 6</span>
+        <span class="text-danger" *ngIf="f.firstName.errors.maxlength"> Max length <= 10</span>
+      </div>
+     </div>
+      <div
+            class="form-group col-md-6">
+            <label for="lastName">Last Name</label>
+            <input formControlName="lastName" type="text" class="form-control" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="contactEmail">Email</label>
+        <input
+        [ngClass]="{red: f.contactEmail.errors}"
+        formControlName="contactEmail" type="text" class="form-control" placeholder="First Name">
+        <span class="text-danger" *ngIf="f.contactEmail.errors?.email"> This is not email</span>
+        <span class="text-danger" *ngIf="f.contactEmail.errors?.required"> required</span>
+      </div>
+
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label
+        [ngStyle]="{'color': f.cardId.errors?.myError ? 'red' : 'black'}"
+         for="cardId">Card ID </label>
+        <input
+         [ngClass]="{'red': f.cardId.errors?.myError }"
+        formControlName="cardId" type="text" class="form-control" placeholder="1234-5678-1234-5678">
+        <span class="text-danger" *ngIf="f.cardId.errors?.myError"> My error</span>
+      </div>
+
+    </div>
+    <input type="submit" value="submit">
+</form>

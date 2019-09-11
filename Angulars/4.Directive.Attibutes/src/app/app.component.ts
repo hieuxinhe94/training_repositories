@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DirectiveDemo';
+  count = 1;
+
+  increase() {
+    this.count ++;
+  }
 }
