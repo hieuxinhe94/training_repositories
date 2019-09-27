@@ -26,8 +26,11 @@ import { AuthGuard } from './Core/Midware/auth-guard';
   ],
   providers: [
 
-    { provide: HTTP_INTERCEPTORS, useClass: CustomHttpInterceptor, multi: true },
-
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CustomHttpInterceptor,
+      multi: true
+    },
     AuthGuard,
   ],
   bootstrap: [AppComponent]

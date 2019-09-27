@@ -8,12 +8,15 @@ import { DetailComponent } from './detail/detail.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './Core/Midware/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -36,7 +36,7 @@ export class DetailComponent implements OnInit {
     this.openWeatherApiService.weathers.subscribe(
       (weathers) => {
         // Tìm kiếm xem đã có giá trị dữ liệu cached chưa
-        const cachedData = weathers.filter(t => t.city === city);
+        const cachedData = weathers.filter(t => t.city.toLowerCase() === city.toLowerCase());
         // Nếu có rồi thì sử dụng lại
         if (cachedData && cachedData.length !== 0) {
           // lấy bản ghi mới nhất
