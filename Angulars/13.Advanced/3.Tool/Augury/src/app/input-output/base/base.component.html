@@ -1,0 +1,28 @@
+<app-header [navItems]="navModel"></app-header>
+<div class="pt6 ph5">
+  <div class="fl w-50">
+    <div class="pb2">Giant Message Board</div>
+    <div>
+      <app-message-board [message]="message"></app-message-board>
+    </div>
+    <div class="pb2 pt3_5">
+      Message Entry
+    </div>
+    <div>
+      <app-message-entry (messageEvent)="onMessageEvent($event)"></app-message-entry>
+    </div>
+  </div>
+  <div class="fl w-50 bl pl2">
+    <div class="bb">
+      Counter
+      <h3>Parent Count: {{count}}</h3>
+      <div class="">
+        <app-counter (countEvent)="onCountEvent($event)"></app-counter>
+      </div>
+    </div>
+    <div class="pt2">
+      Toggler
+      <app-toggle></app-toggle>
+    </div>
+  </div>
+</div>
