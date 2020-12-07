@@ -1,0 +1,18 @@
+<sk-header (LoginClicked)="showLoginModal()"></sk-header>
+
+<sk-banner (EstimateToolClicked)="showEstimateModal()"></sk-banner>
+
+<sk-product></sk-product>
+
+<sk-our-business></sk-our-business>
+
+<sk-footer></sk-footer>
+
+<nz-modal [(nzVisible)]="showAuthenModal" nzTitle="" (nzOnCancel)="handleCancel()">
+    <sk-login></sk-login>
+</nz-modal>
+
+
+<nz-modal [(nzVisible)]="showEstimateTool" nzWidth="800px" nzTitle="" (nzOnCancel)="showEstimateTool = false">
+    <sk-estimate-tool></sk-estimate-tool>
+</nz-modal>

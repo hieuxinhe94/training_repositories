@@ -1,0 +1,86 @@
+<div class="flex-1 flex flex-col justify-center p-12">
+    <div class="z-1 nuxt"><img src="../../../../assets/img/logo.svg" class="w-24">
+        <h1 class="text-xl mt-6 font-bold">Sign Up</h1>
+        <h3 class="text-lg text-gray-600">
+            Sign up to try our amazing services
+        </h3>
+        <div class="text-sm text-red-600 mt-6"></div>
+
+        <nz-spin [nzSpinning]="submitting" nzTip="Loading...">
+
+            <form class="flex flex-col justify-center" [formGroup]="registerForm" (submit)="signUp()">
+                <div class="flex flex-col">
+                    <label class="block tracking-wide text-grey-darker text-xs font-bold mt-2">
+            Full Name
+          </label>
+                    <label for="name" class="hidden">Full Name</label>
+                    <input type="text" formControlName="fullnameCtl" id="name" placeholder="Full Name" required class="w-100 mt-2 py-1 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800  focus:border-indigo-500 focus:outline-none">
+                    <div *ngIf="f.fullnameCtl.dirty">
+                        <p *ngIf="f.fullnameCtl.errors?.required" class="italic text-red-800">Name is require</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-2">
+                    <label class="block  tracking-wide text-grey-darker text-xs font-bold mt-2">
+            Email
+          </label>
+                    <label for="email" class="hidden">abc@email.com</label>
+                    <input type="email" formControlName="emailCtl" id="email" placeholder="Email" required class="w-100 mt-2 py-1 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800  focus:border-indigo-500 focus:outline-none">
+                    <div *ngIf="f.emailCtl.dirty">
+                        <p *ngIf="f.emailCtl.errors?.required" class="italic text-red-800">Email is require</p>
+                        <p *ngIf="f.emailCtl.errors?.email" class="italic text-red-800">Incorrect email</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-2">
+                    <label class="block  tracking-wide text-grey-darker text-xs font-bold mt-2" for="grid-password">
+            Telephone
+          </label>
+                    <label for="tel" class="hidden">0909090909</label>
+                    <input type="tel" formControlName="phonenumberCtl" name="tel" id="tel" placeholder="Phone number" required class="w-100 mt-2 py-1 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800  focus:border-indigo-500 focus:outline-none">
+                    <div *ngIf="f.phonenumberCtl.dirty">
+                        <p *ngIf="f.phonenumberCtl.errors?.required" class="italic text-red-800">Phone is require</p>
+                        <p *ngIf="f.phonenumberCtl.errors?.minlength" class="italic text-red-800">Min length is 5</p>
+                        <p *ngIf="f.phonenumberCtl.errors?.maxlength" class="italic text-red-800">Min length is 10</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-2">
+                    <label class="block tracking-wide text-grey-darker text-xs font-bold mt-2" for="grid-password">
+            Password
+          </label>
+                    <label for="password" class="hidden">Password</label>
+                    <input type="password" formControlName="passwordCtl" name='password' id="password" placeholder="*******" class="w-100 mt-2 py-1 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800  focus:border-indigo-500 focus:outline-none">
+                    <div *ngIf="f.passwordCtl.dirty">
+                        <p *ngIf="f.passwordCtl.errors?.required" class="italic text-red-800">Password is require</p>
+                        <p *ngIf="f.passwordCtl.errors?.minlength" class="italic text-red-800">Min length is 6</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-2">
+                    <label class="block  tracking-wide text-grey-darker text-xs font-bold mt-2" for="grid-password">
+            Confirm password
+          </label>
+                    <label for="password2" class="hidden">Confirm password</label>
+                    <input type="password" formControlName="passwordConfirmCtl" name='password2' id="password2" placeholder="*******" class="w-100 mt-2 py-1 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800  focus:border-indigo-500 focus:outline-none">
+                    <div *ngIf="f.passwordConfirmCtl.dirty">
+                        <p *ngIf="f.passwordConfirmCtl.errors?.notmatch" class="italic text-red-800">Password not match</p>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="w-full mx-auto lg:mx-0 bg-se-gradient-r text-white font-bold rounded-full mt-6 mb-2 py-4 px-8 shadow opacity-75">
+          Submit
+        </button>
+            </form>
+
+        </nz-spin>
+
+        <div class="mt-4 text-sm">
+            Already having account?
+            <button class="font-bold underline " (click)="backToSignIn()">
+        Sign In
+      </button>
+        </div>
+    </div>
+</div>

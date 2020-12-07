@@ -1,0 +1,16 @@
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Service.deps.json
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Service.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Service.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Data.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Entity.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Data.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.Entity.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.csprojAssemblyReference.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.AssemblyInfoInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.AssemblyInfo.cs
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.csproj.CoreCompileInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.csproj.CopyComplete
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\obj\Debug\netstandard2.0\SK.Service.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.ViewModels.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Service\bin\Debug\netstandard2.0\SK.ViewModels.pdb

@@ -1,0 +1,32 @@
+<section class="page-wrapper page1">
+    <div class="page text-center">
+        <h2 class="" style="opacity: 1; transform: translate(0px, 0px);">Products</h2><span class="separator" style="opacity: 1; transform: translate(0px, 0px);"></span>
+    </div>
+    <div class="ant-row page row text-center">
+
+
+        <div class="container mx-auto max-w-sm w-full sm:w-1/2 mb-5" *ngFor="let item of categories;">
+            <a class="w-full card flex flex-col justify-center bg-white rounded-lg shadow-2xl">
+                <div class="prod-title">
+                    <p class="text-2xl uppercase text-gray-900 font-bold">{{item.categoryName}}</p>
+                    <p class="text-sm text-gray-400">
+                        {{item.productCount}} products
+                    </p>
+                </div>
+                <div class="prod-img">
+                    <img src="{{item.iconSource}}" class="icon filter-icon  filter-{{item.iconName}}" />
+                </div>
+
+                <div class="prod-info grid gap-10">
+                    <div class="flex flex-col md:flex-row justify-between items-center text-gray-900 p-max-desc">
+                        {{item.description}}
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <div class="page text-center pt-10">
+        <span class="ant-btn ant-btn-primary bg-purple-600">Show More</span>
+    </div>
+</section>

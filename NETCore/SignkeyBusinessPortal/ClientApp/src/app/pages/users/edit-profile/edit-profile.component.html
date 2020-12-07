@@ -1,0 +1,86 @@
+<div class="w-full py-6 px-3">
+
+    <form class="flex flex-col justify-center" [formGroup]="profileForm" (submit)="saveProfile()">
+
+        <nz-spin [nzSpinning]="isSubmiting" nzTip="Loading...">
+
+            <div class="w-full md:flex mb-3">
+                <div class="w-full mb-3 md:mb-0">
+                    <label class="block tracking-wide text-grey-darker   font-bold mb-2" for="grid-first-name">
+            Name
+          </label>
+                    <input formControlName="nameCtl" class="appearance-none block w-full shadow bg-grey-lighter text-grey-darker border border-red rounded py-1 px-4 mb-1" id="grid-first-name" type="text" placeholder="Jane">
+
+                    <div *ngIf="f.nameCtl.touched">
+                        <p *ngIf="f.nameCtl.errors" class="text-red-800   italic">Invalid Name</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mb-3">
+                <div class="md:w-full  mb-3 md:mb-0">
+                    <label class="block  tracking-wide text-grey-darker   font-bold mb-2" for="grid-first-name">
+            Phone Number
+          </label>
+                    <input formControlName="phonenumberCtl" value="{{this.tempUserprofile.PhoneNumber}}" class="appearance-none block w-full shadow  bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-1 px-4 mb-1" id="grid-password" type="tel">
+                    <div *ngIf="f.phonenumberCtl.touched">
+                        <p *ngIf="f.phonenumberCtl.errors" class="text-red-800   italic">Invalid Number</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mb-3">
+                <div class="md:w-full mb-3 md:mb-0">
+                    <label class="block tracking-wide text-grey-darker   font-bold mb-2" for="grid-last-name">
+            Address
+          </label>
+                    <input formControlName="addressCtl" class="appearance-none block w-full bg-grey-lighter text-grey-darker border shadow  border-grey-lighter rounded py-1 px-4 mb-1" id="grid-last-name" type="text" nz-button value="{{this.tempUserprofile.Address}}">
+                    <div *ngIf="f.addressCtl.touched">
+                        <p *ngIf="f.addressCtl.errors" class="text-red-800   italic">Invalid Address</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:flex mb-3">
+                <div class="md:w-full ">
+                    <label class="block   tracking-wide text-grey-darker   font-bold mb-2" for="grid-password">
+            Email
+          </label>
+                    <div class="md:w-full flex">
+                        <span readonly class=" rounded py-3 px-4 mb-1" id="grid-password">
+              {{this.tempUserprofile.Email}}
+            </span>
+
+                        <nz-spin [nzSpinning]="tempUserprofile.EmailVerifying" nzTip=""></nz-spin>
+                        <button *ngIf=" tempUserprofile.Email?.length >= 5 && !tempUserprofile.EmailVerifying && !tempUserprofile.EmailVerified" (click)="verifyEmail()" class="h-6 inline-block bg-purple-600 rounded-full px-5 mt-3 text-sm font-semibold text-white ml-2">
+              Verify
+            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:flex mb-3">
+                <div class="md:w-full">
+                    <label class="block   tracking-wide text-grey-darker   font-bold mb-2" for="grid-password">
+            Paypal Email
+          </label>
+                    <div class="md:w-full flex">
+                        <input formControlName="paypalEmailCtl" class="appearance-none block w-1/2 shadow  bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-1 px-4 mb-1" id="grid-password" type="email">
+
+                        <nz-spin [nzSpinning]="tempUserprofile.PaypalEmailVerifying" nzTip=""></nz-spin>
+                        <button *ngIf="tempUserprofile.PaypalEmail?.length > 5 && !tempUserprofile.PaypalEmailVerifying && !tempUserprofile.PaypalEmailVerified" (click)="verifyPaypal()" class="h-6 inline-block bg-purple-600 rounded-full px-5 mt-3 text-sm font-semibold text-white ml-2">
+              Verify
+            </button>
+                    </div>
+                    <div *ngIf="f.paypalEmailCtl.touched">
+                        <p *ngIf="f.paypalEmailCtl.errors" class="text-red-800   italic">Invalid Paypal email</p>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" *ngIf="!(tempUserprofile.EmailVerifying || tempUserprofile.PaypalEmailVerifying)" class="flex justify-between px-10 pl-15 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-indigo-800 border border-transparent rounded-lg active:bg-purple-200 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+        Save
+      </button>
+        </nz-spin>
+    </form>
+
+</div>

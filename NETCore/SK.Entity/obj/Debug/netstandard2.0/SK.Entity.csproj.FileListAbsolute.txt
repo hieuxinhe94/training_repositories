@@ -1,0 +1,8 @@
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\bin\Debug\netstandard2.0\SK.Entity.deps.json
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\bin\Debug\netstandard2.0\SK.Entity.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\obj\Debug\netstandard2.0\SK.Entity.AssemblyInfoInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\obj\Debug\netstandard2.0\SK.Entity.AssemblyInfo.cs
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\bin\Debug\netstandard2.0\SK.Entity.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\obj\Debug\netstandard2.0\SK.Entity.csproj.CoreCompileInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\obj\Debug\netstandard2.0\SK.Entity.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Entity\obj\Debug\netstandard2.0\SK.Entity.pdb

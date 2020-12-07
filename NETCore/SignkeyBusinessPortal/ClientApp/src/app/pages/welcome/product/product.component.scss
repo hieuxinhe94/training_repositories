@@ -1,0 +1,26 @@
+.p-max-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.icon {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: #912ad4;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.filter-icon {
+    filter: invert(39%) sepia(96%) saturate(467%) hue-rotate(217deg) brightness(88%) contrast(89%);
+}
+
+.filter-icon-office {
+    filter: invert(39%) sepia(96%) saturate(467%) hue-rotate(217deg) brightness(88%) contrast(89%);
+}

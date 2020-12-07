@@ -1,0 +1,7 @@
+.copy-code-hover {
+  display: none;
+}
+
+.copy-code:hover + .copy-code-hover {
+  display: inline-block;
+}

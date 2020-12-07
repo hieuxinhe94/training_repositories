@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "nscDjR7dSOMrRIGNOUXW2uvuP8R3HkdQhejCN+XO4elNpi3WMYj9x9AlD2N++qXjIfH/7R8KwN5MfnjEk2u8Fg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SignKeys 01\\Documents\\Signkeys\\Sources\\soeasy-business-portal\\SK.ViewModels\\SK.ViewModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\SignKeys 01\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

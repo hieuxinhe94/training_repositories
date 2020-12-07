@@ -1,0 +1,36 @@
+<header class="lg:px-16  bg-white flex flex-wrap items-center  ">
+
+    <div class="flex-1 flex logo-wrapper items-center" style="padding: 0 5%;">
+        <a class="text-purple no-underline hover:no-underline font-bold lg:text-4xl sm:text-xl" href="#">
+            <img class="h-8 fill-current inline" src="../../../assets/img/logo.png" />
+            <div class="hidden lg:inline-block">
+                <span class="ml-5 text-3xl sm:text-sm font-bold text-purple-800">SoEasy Business Portal</span>
+            </div>
+        </a>
+    </div>
+
+
+    <label for="menu-toggle" class="pointer-cursor md:hidden block">
+    <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      viewBox="0 0 20 20">
+      <title>menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  </label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav class="bg-white">
+            <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <li><a class="md:p-4 py-3 px-0 block" href="/AboutUs">AboutUs</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="/Contact">Contact</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="/Blog">Blog</a></li>
+                <li>
+                    <button type="submit" (click)="onShowLoginModal()" class="ant-btn ant-btn-primary bg-gray-100 text-purple-800 mt-1 px-6 border-gray-300">
+            Sign In
+          </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

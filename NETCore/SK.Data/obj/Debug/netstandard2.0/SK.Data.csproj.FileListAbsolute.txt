@@ -1,0 +1,12 @@
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\bin\Debug\netstandard2.0\SK.Entity.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.csprojAssemblyReference.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.AssemblyInfoInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.AssemblyInfo.cs
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\bin\Debug\netstandard2.0\SK.Data.deps.json
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\bin\Debug\netstandard2.0\SK.Data.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\bin\Debug\netstandard2.0\SK.Data.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\bin\Debug\netstandard2.0\SK.Entity.pdb
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.csproj.CoreCompileInputs.cache
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.csproj.CopyComplete
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.dll
+C:\Users\SignKeys 01\Documents\Signkeys\Sources\soeasy-business-portal\SK.Data\obj\Debug\netstandard2.0\SK.Data.pdb

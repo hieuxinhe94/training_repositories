@@ -1,0 +1,7 @@
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+#menu-toggle:checked+#menu {
+    display: block;
+}
